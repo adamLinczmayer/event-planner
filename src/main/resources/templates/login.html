@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="author" content="login"/>
+    <title>EventPlannerLogin</title>
+</head>
+<body>
+
+<div th:if="${login}" class="container">
+    <form class="form-signin" action="/user/login" method="post">
+        <div class="jumbotron text-center">
+            <h1 class="form-signin-heading">Please login to your account</h1>
+            <a href="/"><h3>Back to Home</h3></a>
+            <div th:if="${incorrect}" class="alert alert-danger">
+                <h2>Username or password is incorrect!</h2>
+            </div>
+        </div>
+        <div class="well well-sm form-group">
+            <input type="text" class="form-control" name="username" placeholder="Username" required=""
+                   autofocus=""/>
+            <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+            <button class="btn btn-lg btn-default btn-block" type="submit">Login</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
