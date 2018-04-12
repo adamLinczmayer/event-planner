@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+
+    <link rel="stylesheet" href="/css/addevent.css">
+</head>
+<body align="center">
+<form action="/save-event" method="post">
+    <br>Event name:<br>
+    <input type="text" name="event-name" required>
+    <br><br>
+    Choose date:
+    <br>
+    <br>
+    <input type="checkbox" name="event-date" value="2018.05.05.">2018.05.05.
+    <br>
+    <br>
+    <input type="checkbox" name="event-date" value="2019.06.06.">2019.06.06.
+    <br><br><br>
+    <input type="submit" value="Add Event" class="add_event_button" required>
+</form>
+</body>
+</html>
