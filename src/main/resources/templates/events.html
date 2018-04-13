@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Events page</title>
+    <link rel="stylesheet" href="/css/addevent.css">
+</head>
+<body align="center">
+<br><br>
+<h2>Id: </h2><div th:text="${events.getId()}">User's Id</div>
+<br><br><h2>Name:</h2> <div th:text="${events.getEventName()}">User's name</div>
+<br><br><h2>Date:</h2> <div th:text="${events.getDate()}">User's name</div>
+
+</body>
+</html>
+
+
+

@@ -14,9 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Map;
 
-import static java.lang.Integer.parseInt;
-import static java.lang.Long.parseLong;
-
 @Controller
 public class EventController {
 
@@ -39,4 +36,10 @@ public class EventController {
         return "redirect:/";
     }
 
+    @RequestMapping(value = "/events")
+    public String events(Model model) {
+        Event events = eventService.findEventById(1L);
+        model.addAttribute("events", events);
+        return "events";
+    }
 }
